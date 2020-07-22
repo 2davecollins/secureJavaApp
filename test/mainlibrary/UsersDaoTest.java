@@ -2,26 +2,33 @@ package mainlibrary;
 
 import org.dom4j.util.UserDataAttribute;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import static org.testng.Assert.*;
 
 public class UsersDaoTest {
     UsersDao udao = null;
 
+    @BeforeTest
+    public void beforeTest(){
+        System.out.println("Run Before Test");
+        udao = new UsersDao();
+
+    }
+    @AfterTest
+    public void afterTest(){
+        System.out.println("Run after Test");
+        udao = null;
+    }
+
     @BeforeMethod
     public void setUp() {
-        System.out.println("UserDaoTest setUp");
-        udao = new UsersDao();
 
     }
 
     @AfterMethod
     public void tearDown() {
-        System.out.println("UserDaoTest TearDown");
-        udao = null;
+
     }
 
     @Test(priority = 1)
@@ -30,6 +37,12 @@ public class UsersDaoTest {
         Assert.assertEquals(true, udao.validate("Deco","1234"));
        
     }
+    @Test(priority = 2)
+    public void testFailValidate() {
+        System.out.println("Validate non user");
+        Assert.assertEquals(false, udao.validate("Nando","1234"));
+
+    }
 
     @Test(priority = 3)
     public void testCheckIfAlready() {
@@ -37,7 +50,7 @@ public class UsersDaoTest {
         Assert.assertEquals(true,udao.CheckIfAlready("Deco"));
     }
 
-    @Test(priority = 2)
+    @Test(priority = 4)
     public void testAddUser() {
         System.out.println("Test Add User");
 

@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="E:/NCIRL/SPADProject/intellijCode/securityProject/src/mainlibrary">
-        <classes>
-            <class name="mainlibrary.UsersDaoTest"/>
-        </classes>
+    <test verbose="2" preserve-order="true" name="E:/NCIRL/SPADProject/intellijCode/securityProject/testng.xml">
+      <classes>
+          <class name="mainlibrary.UsersDaoTest">
+              <methods>
+                  <include name="testValidate"/>
+                  <include name="testFailValidate"/>
+                  <include name="testCheckIfAlready"/>
+              </methods>
+
+          </class>
+          <class name="mainlibrary.LibrarianDaoTest">
+              <methods>
+                  <include name="testValidate"/>
+                  <include name="testFailValidate"/>
+              </methods>
 
 
+          </class>
+
+      </classes>
     </test>
 </suite>
