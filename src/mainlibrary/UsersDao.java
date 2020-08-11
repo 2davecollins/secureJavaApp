@@ -67,5 +67,19 @@ public class UsersDao {
         return status;
 
     }
+    public static int cleanup() {
+        String name = "TestUser";
+        int status = 0;
+        try {
+            Connection con = DB.getConnection();
+            PreparedStatement ps = con.prepareStatement("delete from Users where UserName=?");
+            ps.setString(1, name);
+            status = ps.executeUpdate();
+            con.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        return status;
+    }
 
 }

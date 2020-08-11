@@ -9,20 +9,21 @@ public class LibrarianDaoTest {
     LibrarianDao ldao = null;
 
     @BeforeTest
-    public void beforeTest(){
+    public void beforeTest() {
         System.out.println("Run Before Test");
         ldao = new LibrarianDao();
 
     }
-    @AfterTest
-    public void afterTest(){
+
+    @AfterTest(alwaysRun = true)
+    public void afterTest() {
         System.out.println("Run after Test");
+        ldao.cleanup();
         ldao = null;
     }
 
     @BeforeMethod
     public void setUp() {
-       // System.out.println("LibrarianDao setup");
 
     }
 
@@ -30,35 +31,31 @@ public class LibrarianDaoTest {
     public void tearDown() {
 
     }
+    @Test(priority = 1)
+    public void testValidateFalse() {
+        System.out.println("Test Validate with incorrect librarian");
+        Assert.assertEquals(false, ldao.validate("hack", "1234"));
+    }
 
-    @Test(enabled = false)
+
+    @Test(priority = 2, enabled = true)
     public void testSave() {
         System.out.println("Test Save method");
-        Assert.assertEquals(0,ldao.save("Hacker","1234","hacker@g.com","hidden address","Dublin","Batman"));
+        Assert.assertEquals(1, ldao.save("Hacker", "1234", "hacker@g.com", "hack", "Dublin", "Batman"));
     }
-
-    @Test(enabled=false)
-    public void testInvalidDelete() {
-        System.out.println("Test Detete method");
-        Assert.assertEquals(0,ldao.delete(5));
-    }
-
-    @Test(enabled=false)
-    public void testDelete() {
-        System.out.println("Test Detete method");
-        Assert.assertEquals(1,ldao.delete(3));
-    }
-
 
     @Test(priority = 3)
-    public void testValidate() {
-        System.out.println("Test Validate method");
-        Assert.assertEquals(true,ldao.validate("Encosier","1234"));
+    public void testValidateTrue() {
+        System.out.println("Test Validate with incorrect librarian");
+        Assert.assertEquals(true, ldao.validate("hack", "1234"));
     }
 
-    @Test(priority = 4)
-    public void testFailValidate() {
-        System.out.println("Test Validate method");
-        Assert.assertEquals(false,ldao.validate("Hacker","1234"));
+    @Test(priority = 4, enabled = true)
+    public void testDelete() {
+        System.out.println("Test Detete method");
+        int hack = ldao.findHacker();
+        System.out.println("Deleting Hacker id "+hack);
+        Assert.assertEquals(1, ldao.delete(hack));
     }
+
 }

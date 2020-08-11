@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="E:/NCIRL/SPADProject/intellijCode/securityProject/testng.xml">
+
+<suite name="All Test Suite" configfailurepolicy="continue" >
+    <test verbose="2" name="E:/NCIRL/SPADProject/intellijCode/securityProject/testng.xml">
       <classes>
           <class name="mainlibrary.UsersDaoTest">
               <methods>
-                  <include name="testValidate"/>
+                  <include name="testIfAlreadyFalse"/>
                   <include name="testFailValidate"/>
-                  <include name="testCheckIfAlready"/>
+                  <include name="testAddUser"/>
+                  <include name="testIfAlreadyTrue"/>
+                  <include name="testValidate"/>
+                  <include name="testValidateWrongPass"/>
+                  <include name="testValidateBlankUser"/>
+                  <include name="testSQLOR1eq1"/>
               </methods>
 
           </class>
-          <class name="mainlibrary.LibrarianDaoTest">
-              <methods>
-                  <include name="testValidate"/>
-                  <include name="testFailValidate"/>
-              </methods>
-
-
-          </class>
-
+          
       </classes>
     </test>
 </suite>
