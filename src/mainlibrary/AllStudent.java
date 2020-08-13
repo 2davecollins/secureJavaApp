@@ -398,27 +398,31 @@ public class AllStudent extends javax.swing.JFrame {
             model.removeRow(model.getRowCount() - 1);
         }
 
-        try (Connection Con = DB.getConnection()) {
-            PreparedStatement ps = Con.prepareStatement("select * from Users", ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-            ResultSet rs = ps.executeQuery();
+        try(Connection Con = DB.getConnection()){
+            try(PreparedStatement ps = Con.prepareStatement("select * from Users", ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE)){
+                try(ResultSet rs = ps.executeQuery()){
+                    ResultSetMetaData rsmd = rs.getMetaData();
+                    int colnum = rsmd.getColumnCount();
+                    String Row[];
+                    Row = new String[colnum];
+                    while (rs.next()) {
+                        for (int i = 1; i <= colnum; i++) {
+                            Row[i - 1] = rs.getString(i);
+                        }
+                        model.addRow(Row);
+                    }
 
-            ResultSetMetaData rsmd = rs.getMetaData();
-
-            int colnum = rsmd.getColumnCount();
-
-            String Row[];
-            Row = new String[colnum];
-            while (rs.next()) {
-                for (int i = 1; i <= colnum; i++) {
-                    Row[i - 1] = rs.getString(i);
+                }catch (SQLException e){
+                    e.printStackTrace();
                 }
-                model.addRow(Row);
+            }catch (SQLException e){
+                e.printStackTrace();
             }
 
-            Con.close();
-        } catch (Exception e) {
-            System.out.println(e);
+        }catch (SQLException e){
+            e.printStackTrace();
         }
+
     }//GEN-LAST:event_ALLActionPerformed
 
     /**
