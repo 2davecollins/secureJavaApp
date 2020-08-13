@@ -29,7 +29,7 @@ public class UserView extends javax.swing.JFrame {
      *
      * @throws java.sql.SQLException
      */
-    public static String UserID;
+    private static String UserID;
 
     public UserView() throws SQLException {
         setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);

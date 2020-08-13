@@ -5,79 +5,81 @@
  */
 package mainlibrary;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 
 /**
- *
  * @author bikash
  */
 public class UsersDao {
 
     public static boolean validate(String name, String password) {
         boolean status = false;
-        try {
-            Connection con = DB.getConnection();
-            String select = "select * from Users where UserName= '" + name + "' and UserPass='"+ password +"'";
-            Statement selectStatement = con.createStatement();
-            ResultSet rs = selectStatement.executeQuery(select);
-            status = rs.next();
-            con.close();
-        } catch (Exception e) {
-            System.out.println(e);
+        try (Connection con = DB.getConnection()) {
+            try (PreparedStatement ps = con.prepareStatement("select * from Users where UserName=? and UserPass=?")) {
+                ps.setString(1, name);
+                ps.setString(2, password);
+                try (ResultSet rs = ps.executeQuery()) {
+                    status = rs.next();
+                }
+            } catch (SQLException e) {
+            }
+        } catch (SQLException e) {
         }
         return status;
     }
 
     public static boolean CheckIfAlready(String UserName) {
         boolean status = false;
-        try {
-            Connection con = DB.getConnection();
-            String select = "select * from Users where UserName= '" + UserName +"'";
-            Statement selectStatement = con.createStatement();
-            ResultSet rs = selectStatement.executeQuery(select);
-            status = rs.next();
-            con.close();
-        } catch (Exception e) {
-            System.out.println(e);
+        try (Connection con = DB.getConnection()) {
+            try (PreparedStatement ps = con.prepareStatement("select * from Users where UserName=? ")) {
+                ps.setString(1, UserName);
+                try (ResultSet rs = ps.executeQuery()) {
+                    status = rs.next();
+                } catch (SQLException e) {
+
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } catch (SQLException e) {
+
         }
         return status;
-
     }
 
     public static int AddUser(String User, String UserPass, String UserEmail, String Date) {
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 
         int status = 0;
-        try {
+        try (Connection con = DB.getConnection()) {
+            try (PreparedStatement ps = con.prepareStatement("insert into Users(UserPass,RegDate,UserName,Email) values(?,?,?,?)")) {
+                ps.setString(1, UserPass);
+                ps.setString(2, Date);
+                ps.setString(3, User);
+                ps.setString(4, UserEmail);
+                status = ps.executeUpdate();
+            } catch (SQLException e) {
+                //e.printStackTrace();
+            }
 
-            Connection con = DB.getConnection();
-            PreparedStatement ps = con.prepareStatement("insert into Users(UserPass,RegDate,UserName,Email) values(?,?,?,?)");
-            ps.setString(1, UserPass);
-            ps.setString(2, Date);
-            ps.setString(3, User);
-            ps.setString(4, UserEmail);
-            status = ps.executeUpdate();
-            con.close();
-        } catch (Exception e) {
-            System.out.println(e);
+        } catch (SQLException e) {
+            //e.printStackTrace();
         }
         return status;
 
     }
+
     public static int cleanup() {
         String name = "TestUser";
         int status = 0;
-        try {
-            Connection con = DB.getConnection();
-            PreparedStatement ps = con.prepareStatement("delete from Users where UserName=?");
-            ps.setString(1, name);
-            status = ps.executeUpdate();
-            con.close();
-        } catch (Exception e) {
-            System.out.println(e);
+        try (Connection con = DB.getConnection()) {
+            try (PreparedStatement ps = con.prepareStatement("delete from Users where UserName=?")) {
+                ps.setString(1, name);
+                status = ps.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return status;
     }

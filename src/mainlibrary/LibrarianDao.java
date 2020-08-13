@@ -4,94 +4,106 @@ import java.sql.*;
 
 public class LibrarianDao {
 
-    public static int save(String name, String password, String email, String address, String city, String contact) {
+    public static int save(String FName, String UName, String Pass, String EMail) {
         int status = 0;
-        try {
-
-            Connection con = DB.getConnection();
-//            PreparedStatement ps = con.prepareStatement("insert into librarian(name,password,email,address,city,contact) values(?,?,?,?,?,?)");
-//            ps.setString(1, name);
-//            ps.setString(2, password);
-//            ps.setString(3, email);
-//            ps.setString(4, address);
-//            ps.setString(5, city);
-//            ps.setString(6, contact);
-            System.out.println("Fn "+ name+" Un "+address+" pass "+ password+" email "+email);
-
-            PreparedStatement ps = con.prepareStatement("insert into librarian(FullName, UserName, Password,Email) values(?,?,?,?)");
-            ps.setString(1, name);
-            ps.setString(2, address);
-            ps.setString(3, password);
-            ps.setString(4, email);
-
-            status = ps.executeUpdate();
-            con.close();
-        } catch (Exception e) {
-            System.out.println(e);
+        try (Connection con = DB.getConnection();) {
+            try (PreparedStatement ps = con.prepareStatement("insert into librarian(FullName, UserName, Password,Email) values(?,?,?,?)");) {
+                ps.setString(1, FName);
+                ps.setString(2, UName);
+                ps.setString(3, Pass);
+                ps.setString(4, EMail);
+                status = ps.executeUpdate();
+            } catch (SQLException e) {
+                //e.printStackTrace();
+            }
+        } catch (SQLException e) {
+            //System.out.println(e);
         }
         return status;
     }
 
     public static int delete(int id) {
         int status = 0;
+        Connection con = DB.getConnection();
         try {
-            Connection con = DB.getConnection();
             PreparedStatement ps = con.prepareStatement("delete from Librarian where LibrarianID=?");
-            ps.setInt(1, id);
-            status = ps.executeUpdate();
-            con.close();
-        } catch (Exception e) {
-            System.out.println(e);
+            try {
+                ps.setInt(1, id);
+                status = ps.executeUpdate();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } finally {
+                ps.close();
+            }
+
+        } catch (SQLException e) {
+            //System.out.println(e);
+        } finally {
+            try {
+                con.close();
+            } catch (SQLException e) {
+                //e.printStackTrace();
+            }
         }
         return status;
     }
 
     public static boolean validate(String name, String password) {
         boolean status = false;
-        try {
-            Connection con = DB.getConnection();
-            String select = "select * from Librarian where UserName= '" + name + "' and Password='"+ password +"'";
-            Statement selectStatement = con.createStatement();
-            ResultSet rs = selectStatement.executeQuery(select);
-          
-            status = rs.next();
-            con.close();
-        } catch (Exception e) {
-            System.out.println(e);
+        try(Connection con = DB.getConnection()){
+            try(PreparedStatement ps = con.prepareStatement("select * from Librarian where UserName=? and password=?")){
+                ps.setString(1,name);
+                ps.setString(2,password);
+                try (ResultSet rs = ps.executeQuery()) {
+                    status = rs.next();
+                }catch(SQLException e){
+                    //e.printStackTrace();
+                }
+            }catch (SQLException e){
+                //e.printStackTrace();
+            }
+
+        }catch (SQLException e){
+            e.printStackTrace();
         }
         return status;
     }
-    public static int cleanup() {
+
+    public static int cleanup() throws SQLException {
         int status = 0;
         String user = "hack";
-        try {
-            Connection con = DB.getConnection();
-            PreparedStatement ps = con.prepareStatement("delete from librarian where UserName=?");
-            ps.setString(1, user);
-            status = ps.executeUpdate();
-            con.close();
-        } catch (Exception e) {
-            System.out.println(e);
+        try (Connection con = DB.getConnection()) {
+            try (PreparedStatement ps = con.prepareStatement("delete from librarian where UserName=?")) {
+                ps.setString(1, user);
+                status = ps.executeUpdate();
+            } catch (SQLException e) {
+            }
+        } catch (SQLException e) {
+            // e.printStackTrace();
         }
+
         return status;
     }
 
     public static int findHacker() {
         int status = 0;
         String user = "hack";
-        try {
-            Connection con = DB.getConnection();
-            PreparedStatement ps = con.prepareStatement("select LibrarianID from librarian where UserName=?");
-            ps.setString(1, user);
-            ResultSet rs = ps.executeQuery();
-            while(rs.next()){
-                status = rs.getInt("LibrarianID");
+        try (Connection con = DB.getConnection()) {
+            try (PreparedStatement ps = con.prepareStatement("select LibrarianID from librarian where UserName=?")) {
+                ps.setString(1, user);
+                try (ResultSet rs = ps.executeQuery()) {
+                    while (rs.next()) {
+                        status = rs.getInt("LibrarianID");
+                    }
+                } catch (SQLException e) {
+                    //e.printStackTrace();
+                }
+            } catch (SQLException e) {
+                //e.printStackTrace();
             }
-            con.close();
-        } catch (Exception e) {
-            System.out.println(e);
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return status;
     }
-
 }

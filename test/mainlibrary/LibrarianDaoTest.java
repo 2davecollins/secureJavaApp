@@ -3,6 +3,8 @@ package mainlibrary;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+import java.sql.SQLException;
+
 import static org.testng.Assert.*;
 
 public class LibrarianDaoTest {
@@ -18,7 +20,11 @@ public class LibrarianDaoTest {
     @AfterTest(alwaysRun = true)
     public void afterTest() {
         System.out.println("Run after Test");
-        ldao.cleanup();
+        try {
+            ldao.cleanup();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
         ldao = null;
     }
 
@@ -41,7 +47,7 @@ public class LibrarianDaoTest {
     @Test(priority = 2, enabled = true)
     public void testSave() {
         System.out.println("Test Save method");
-        Assert.assertEquals(1, ldao.save("Hacker", "1234", "hacker@g.com", "hack", "Dublin", "Batman"));
+        Assert.assertEquals(1, ldao.save("Hacker", "hack", "1234", "hack@h.com"));
     }
 
     @Test(priority = 3)

@@ -15,7 +15,7 @@ import java.sql.ResultSet;
  */
 public class UserLoginSuccess extends javax.swing.JFrame {
 
-    public static String GetName, GetRegDate, GetEmail, GetUserID;
+    private static String GetName, GetRegDate, GetEmail, GetUserID;
 
     /**
      * Creates new form LibrarianSuccess

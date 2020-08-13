@@ -12,7 +12,7 @@ public class UsersDaoTest {
         udao = new UsersDao();
 
     }
-    @AfterTest(alwaysRun = true)
+    @AfterTest
     public void afterTest(){
         System.out.println("Run after Test");
         udao.cleanup();
@@ -43,7 +43,6 @@ public class UsersDaoTest {
     @Test(priority = 3)
     public void testAddUser() {
         System.out.println("Test to add new User");
-
         Assert.assertEquals(1,udao.AddUser("TestUser","123", "test@g.com","2020-05-05"));
     }
     @Test(priority = 4)

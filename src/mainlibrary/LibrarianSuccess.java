@@ -8,6 +8,7 @@ package mainlibrary;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import javax.swing.JFrame;
 
 /**
@@ -23,7 +24,7 @@ public class LibrarianSuccess extends javax.swing.JFrame {
         return ThisLogined;//To change body of generated methods, choose Tools | Templates.
     }
 
-    public static String Name, LibrarianID, Email;
+    private static String Name, LibrarianID, Email;
 
     /**
      * Creates new form LibrarianSuccess
@@ -376,24 +377,28 @@ public class LibrarianSuccess extends javax.swing.JFrame {
         });
         String User = args[0];
         String Pass = args[1];
-        try {
-            Connection Con;
-            Con = DB.getConnection();
-            PreparedStatement ps;
-            ps = Con.prepareStatement("select * from Librarian where UserName=? and Password=?");
-            ps.setString(1, User);
-            ps.setString(2, Pass);
-            ResultSet rs;
-            rs = ps.executeQuery();
-            boolean status = rs.next();
-            Name = rs.getString("FullName");
-            LibrarianID = rs.getString("LibrarianID");
-            Email = rs.getString("Email");
-            System.out.println(Name + " " + LibrarianID + " " + Email);
-            Con.close();
+        try(Connection con = DB.getConnection()){
+            try(PreparedStatement ps = con.prepareStatement("select * from Librarian where UserName=? and Password=?")){
+                ps.setString(1,User);
+                ps.setString(2,Pass);
+                try(ResultSet rs = ps.executeQuery()){
+                   // boolean status = rs.next();
+                    while(rs.next()){
+                        Name = rs.getString("FullName");
+                        LibrarianID = rs.getString("LibrarianID");
+                        Email = rs.getString("Email");
+                        System.out.println(Name + " " + LibrarianID + " " + Email);
+                    }
 
-        } catch (Exception f) {
-            System.out.println(f);
+                }catch (SQLException e){
+                    e.printStackTrace();
+                }
+            }catch(SQLException e){
+                e.printStackTrace();
+            }
+
+        }catch(SQLException e){
+            e.printStackTrace();
         }
 
     }

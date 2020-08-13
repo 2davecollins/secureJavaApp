@@ -16,8 +16,8 @@ import java.util.Properties;
  */
 public class DB {
 
-    public static String user = "root";
-    public static String connection = "jdbc:mysql://localhost:3306/library";
+    public static final String user = "root";
+    public static final String connection = "jdbc:mysql://localhost:3306/library";
     
     public static Connection getConnection() {
         Connection con = null;
