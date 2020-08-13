@@ -58,27 +58,6 @@ public class AllStudent extends javax.swing.JFrame {
         }
 
 
-//        try (Connection Con = DB.getConnection()) {
-//            PreparedStatement ps = Con.prepareStatement("select * from Users", ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-//            ResultSet rs = ps.executeQuery();
-//
-//            ResultSetMetaData rsmd = rs.getMetaData();
-//
-//            int colnum = rsmd.getColumnCount();
-//
-//            String Row[];
-//            Row = new String[colnum];
-//            while (rs.next()) {
-//                for (int i = 1; i <= colnum; i++) {
-//                    Row[i - 1] = rs.getString(i);
-//                }
-//                model.addRow(Row);
-//            }
-//
-//            Con.close();
-//        } catch (SQLException e) {
-//            e.printStackTrace(System.out);
-//        }
     }
 
     /**
@@ -313,44 +292,6 @@ public class AllStudent extends javax.swing.JFrame {
             }
 
 
-//            try (Connection Con = DB.getConnection()) {
-//                PreparedStatement ps = Con.prepareStatement("select * from Users where UserName like ?", ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-//                ps.setString(1, Search);
-//                ResultSet rs = ps.executeQuery();
-//
-//                ResultSetMetaData rsmd = rs.getMetaData();
-//
-//                int colnum = rsmd.getColumnCount();
-//
-//                //code here
-//                String Row[];
-//                Row = new String[colnum];
-//                while (rs.next()) {
-//                    for (int i = 1; i <= colnum; i++) {
-//                        Row[i - 1] = rs.getString(i);
-//                    }
-//                    model.addRow(Row);
-//                }
-//                int rowcount = model.getRowCount();
-//                System.out.println(rowcount);
-//                if (rowcount == 0) {
-//                    String NoRow[];
-//                    NoRow = new String[7];
-//                    NoRow[1] = "NO";
-//                    NoRow[2] = "RESULT";
-//                    NoRow[0] = "";
-//                    NoRow[3] = "";
-//                    NoRow[4] = "";
-//                    NoRow[5] = "";
-//                    NoRow[6] = "";
-//                    model.addRow(NoRow);
-//
-//                }
-//
-//                Con.close();
-//            } catch (Exception e) {
-//                System.out.println(e);
-//            }
         } else if (AuthorRadio.isSelected()) {
 
             String Search = "%" + SearchField.getText() + "%";

@@ -19,6 +19,7 @@ public class BookDaoTest {
     }
     @AfterTest
     public void endTest(){
+        bdao.cleanup();
         bdao = null;
 
     }
