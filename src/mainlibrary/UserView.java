@@ -5,6 +5,8 @@
  */
 package mainlibrary;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
 import java.awt.HeadlessException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -30,6 +32,7 @@ public class UserView extends javax.swing.JFrame {
      */
     private static String UserID;
 
+    @SuppressFBWarnings("RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE")
     public UserView() throws SQLException {
         setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 
@@ -61,7 +64,6 @@ public class UserView extends javax.swing.JFrame {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
         }

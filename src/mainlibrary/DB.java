@@ -11,14 +11,13 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 /**
- *
  * @author bikash
  */
 public class DB {
 
     public static final String user = "root";
     public static final String connection = "jdbc:mysql://localhost:3306/library";
-    
+
     public static Connection getConnection() {
         Connection con = null;
         try {
@@ -29,8 +28,12 @@ public class DB {
             props.put("useServerPrepStmts", "false"); // use client-side prepared statement
             props.put("characterEncoding", "UTF-8"); // ensure charset is utf8 here
 
-            Class.forName("com.mysql.jdbc.Driver");
+            //Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection(connection, props);
+        } catch (RuntimeException e) {
+           throw e;
+        } catch (SQLException e) {
+            e.printStackTrace();
         } catch (Exception e) {
             System.out.println(e);
         }
