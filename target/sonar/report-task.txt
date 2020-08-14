@@ -1,0 +1,6 @@
+projectKey=oniginal-code:1
+serverUrl=http://192.168.99.102:9000
+serverVersion=8.4.1.35646
+dashboardUrl=http://192.168.99.102:9000/dashboard?id=oniginal-code%3A1
+ceTaskId=AXPvVAbS8vkZZUvdOpep
+ceTaskUrl=http://192.168.99.102:9000/api/ce/task?id=AXPvVAbS8vkZZUvdOpep
