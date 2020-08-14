@@ -32,7 +32,7 @@ public class UsersDaoTest {
     @Test(priority = 1)
     public void testIfAlreadyFalse() {
         System.out.println("Test Check if already exists when user not in database ");
-        Assert.assertEquals(false,udao.CheckIfAlready("TestUser"));
+        Assert.assertEquals(false,udao.checkIfAlready("TestUser"));
     }
     @Test(priority = 2)
     public void testFailValidate() {
@@ -43,12 +43,12 @@ public class UsersDaoTest {
     @Test(priority = 3)
     public void testAddUser() {
         System.out.println("Test to add new User");
-        Assert.assertEquals(1,udao.AddUser("TestUser","123", "test@g.com","2020-05-05"));
+        Assert.assertEquals(1,udao.addUser("TestUser","123", "test@g.com","2020-05-05"));
     }
     @Test(priority = 4)
     public void testIfAlreadyTrue() {
         System.out.println("Test Check if new user exists");
-        Assert.assertEquals(true,udao.CheckIfAlready("TestUser"));
+        Assert.assertEquals(true,udao.checkIfAlready("TestUser"));
     }
 
     @Test(priority = 5)

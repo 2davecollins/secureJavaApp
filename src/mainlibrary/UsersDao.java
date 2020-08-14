@@ -28,7 +28,7 @@ public class UsersDao {
         return status;
     }
 
-    public static boolean CheckIfAlready(String UserName) {
+    public static boolean checkIfAlready(String UserName) {
         boolean status = false;
         try (Connection con = DB.getConnection()) {
             try (PreparedStatement ps = con.prepareStatement("select * from Users where UserName=? ")) {
@@ -47,7 +47,7 @@ public class UsersDao {
         return status;
     }
 
-    public static int AddUser(String User, String UserPass, String UserEmail, String Date) {
+    public static int addUser(String User, String UserPass, String UserEmail, String Date) {
 
         int status = 0;
         try (Connection con = DB.getConnection()) {

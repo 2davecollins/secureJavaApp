@@ -41,15 +41,15 @@ public class BookDao {
                 try (ResultSet rs = ps.executeQuery();) {
                     status = rs.next();
                 } catch (SQLException e) {
-                    //e.printStackTrace();
+                    e.printStackTrace();
                 }
 
             } catch (SQLException e) {
-                //e.printStackTrace();
+                e.printStackTrace();
             }
 
         } catch (SQLException e) {
-            //e.printStackTrace();
+            e.printStackTrace();
         }
 
         return status;
@@ -63,11 +63,11 @@ public class BookDao {
                 status = ps.executeUpdate();
 
             } catch (SQLException e) {
-//                e.printStackTrace();
+                e.printStackTrace();
             }
 
         } catch (SQLException e) {
-//            e.printStackTrace();
+            e.printStackTrace();
         }
 
         return status;
@@ -87,11 +87,11 @@ public class BookDao {
                 ps.setString(6, RowN);
                 status = ps.executeUpdate();
             }catch (SQLException e){
-//                e.printStackTrace();
+                e.printStackTrace();
             }
 
         }catch (SQLException e){
-//            e.printStackTrace();
+            e.printStackTrace();
         }
         return status;
     }
@@ -103,11 +103,11 @@ public class BookDao {
                 ps.setInt(1,BookID);
                 status = ps.executeUpdate();
             }catch (SQLException e){
-//                e.printStackTrace();
+                e.printStackTrace();
             }
 
         }catch(SQLException e){
-//            e.printStackTrace();
+            e.printStackTrace();
         }
 
 //        try (Connection con = DB.getConnection()) {

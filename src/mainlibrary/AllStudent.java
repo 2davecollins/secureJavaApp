@@ -5,6 +5,8 @@
  */
 package mainlibrary;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -19,6 +21,7 @@ import javax.swing.table.DefaultTableModel;
 /**
  * @author bikash
  */
+@SuppressFBWarnings("RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE")
 public class AllStudent extends javax.swing.JFrame {
 
     /**

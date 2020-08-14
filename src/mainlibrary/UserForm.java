@@ -229,7 +229,7 @@ public class UserForm extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         String User = UserName.getText();
-        if (UsersDao.CheckIfAlready(User)) {
+        if (UsersDao.checkIfAlready(User)) {
             JOptionPane.showMessageDialog(UserForm.this, "UserName already taken!", "Adding new User Error!", JOptionPane.ERROR_MESSAGE);
         } else {
             User = UserName.getText();
@@ -242,7 +242,7 @@ public class UserForm extends javax.swing.JFrame {
             String RYear = String.valueOf(cal.get(Calendar.YEAR));
             Date = RYear + "-" + RMonth + "-" + RDate;
 
-            if (UsersDao.AddUser(User, UserPass, UserEmail, Date) != 0) {
+            if (UsersDao.addUser(User, UserPass, UserEmail, Date) != 0) {
                 JOptionPane.showMessageDialog(UserForm.this, "User is Added Successfully!", "Adding New User!", JOptionPane.ERROR_MESSAGE);
                 UserName.setText("");
                 Password.setText("");

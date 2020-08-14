@@ -18,9 +18,10 @@ import javax.swing.JFrame;
  */
 public class LibrarianSuccess extends javax.swing.JFrame {
 
-    static JFrame ThisLogined;
+    static volatile JFrame ThisLogined;
 
-    public JFrame getLibrarianLogin() {
+    public static JFrame getLibrarianLogin() {
+
         return ThisLogined;//To change body of generated methods, choose Tools | Templates.
     }
 
@@ -369,13 +370,10 @@ public class LibrarianSuccess extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-
-//                ThisLogined = new LibrarianSuccess();
-//                ThisLogined.setVisible(true);
-
-                LibrarianSuccess ThisLogined = new LibrarianSuccess();
+                if(ThisLogined == null){
+                    ThisLogined = new LibrarianSuccess();
+                }
                 ThisLogined.setVisible(true);
-
 
             }
         });
@@ -426,7 +424,7 @@ public class LibrarianSuccess extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private static javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     // End of variables declaration//GEN-END:variables
