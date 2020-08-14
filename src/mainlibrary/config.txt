@@ -1,4 +1,0 @@
-user=user
-password=1Developer1
-connection=jdbc:mysql://localhost:3306/library
-salt=rgqxY3pU04xmWDWjxGu1KcSdklCyWT

@@ -56,7 +56,8 @@ public class Secret {
                     e.printStackTrace();
                 }
             }
-            return "1Developer1";
+
+            return defaultProps.getProperty("password");
         }
     }
     static String getSalt(){

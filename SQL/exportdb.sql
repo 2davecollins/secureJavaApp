@@ -324,7 +324,7 @@ CREATE TABLE `Users` (
 
 LOCK TABLES `Users` WRITE;
 /*!40000 ALTER TABLE `Users` DISABLE KEYS */;
-INSERT INTO `Users` VALUES (1,'1234','2012-05-15','Deco','deco@gmail.com'),(2,'12345678','2016-11-07','Piyush','pkalkute@gmail.com'),(3,'012345','2016-11-25','NewHero','newhero@gmail.com');
+INSERT INTO `Users` VALUES (1,'rbQTtqSihzfMbC/BrgrC4HPaXfw=','2012-05-15','Deco','deco@gmail.com'),(2,'rbQTtqSihzfMbC/BrgrC4HPaXfw=','2016-11-07','Piyush','pkalkute@gmail.com'),(3,'012345','2016-11-25','NewHero','newhero@gmail.com');
 /*!40000 ALTER TABLE `Users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;

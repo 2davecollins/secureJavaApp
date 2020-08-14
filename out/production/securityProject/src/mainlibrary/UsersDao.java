@@ -14,6 +14,7 @@ public class UsersDao {
 
     public static boolean validate(String name, String password) {
         boolean status = false;
+
         try (Connection con = DB.getConnection()) {
             try (PreparedStatement ps = con.prepareStatement("select * from Users where UserName=? and UserPass=?")) {
                 ps.setString(1, name);
@@ -22,8 +23,10 @@ public class UsersDao {
                     status = rs.next();
                 }
             } catch (SQLException e) {
+                e.printStackTrace();
             }
         } catch (SQLException e) {
+            e.printStackTrace();
         }
         return status;
     }
@@ -36,13 +39,13 @@ public class UsersDao {
                 try (ResultSet rs = ps.executeQuery()) {
                     status = rs.next();
                 } catch (SQLException e) {
-
+                    e.printStackTrace();
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
             }
         } catch (SQLException e) {
-
+            e.printStackTrace();
         }
         return status;
     }
@@ -51,6 +54,11 @@ public class UsersDao {
 
         String salt = Secret.getSalt();
         System.out.println("Salt "+salt);
+        try {
+            UserPass = DB.getEncryptedPassword(UserPass, salt);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         int status = 0;
         try (Connection con = DB.getConnection()) {
@@ -61,11 +69,11 @@ public class UsersDao {
                 ps.setString(4, UserEmail);
                 status = ps.executeUpdate();
             } catch (SQLException e) {
-                //e.printStackTrace();
+                e.printStackTrace();
             }
 
         } catch (SQLException e) {
-            //e.printStackTrace();
+            e.printStackTrace();
         }
         return status;
 

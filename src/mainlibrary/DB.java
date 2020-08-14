@@ -35,25 +35,27 @@ public class DB {
     private static final int KEY_LENGTH = 256;
 
 
-    public static Connection getConnection() {
-        Connection con = null;
-        try {
-            Properties props = new Properties();
-            props.put("user",  Secret.getUser());
-            props.put("password", Secret.getPassword());
-            props.put("useUnicode", "true");
-            props.put("useServerPrepStmts", "false"); // use client-side prepared statement
-            props.put("characterEncoding", "UTF-8"); // ensure charset is utf8 here
 
-            //Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection(connection, props);
-        } catch (RuntimeException e) {
-            throw e;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
-            System.out.println(e);
-        }
+    public static Connection getConnection() {
+
+        Connection con = null;
+            try {
+                Properties props = new Properties();
+                props.put("user",  Secret.getUser());
+                props.put("password", Secret.getPassword());
+                props.put("useUnicode", "true");
+                props.put("useServerPrepStmts", "false"); // use client-side prepared statement
+                props.put("characterEncoding", "UTF-8"); // ensure charset is utf8 here
+
+                //Class.forName("com.mysql.jdbc.Driver");
+                con = DriverManager.getConnection(connection, props);
+            } catch (RuntimeException e) {
+                throw e;
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } catch (Exception e) {
+                System.out.println(e);
+            }
         return con;
     }
 
