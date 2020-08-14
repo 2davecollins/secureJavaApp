@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.0.6" sequence="0" timestamp="1594131409413" analysisTimestamp="1594131611389" release="">
+  <Project projectName="bdsk">
+    <Jar>E:\NCIRL\AndroidProjects\Bdsk</Jar>
+  </Project>
+  <BugInstance type="MS_MUTABLE_ARRAY" priority="1" rank="16" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="com.bluetooth.bdsk.Constants">
+      <SourceLine classname="com.bluetooth.bdsk.Constants" sourcefile="Constants.java" sourcepath="com/bluetooth/bdsk/Constants.java"/>
+    </Class>
+    <Field classname="com.bluetooth.bdsk.Constants" name="TEMPERATURE_UNITS" signature="[Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="com.bluetooth.bdsk.Constants" sourcefile="Constants.java" sourcepath="com/bluetooth/bdsk/Constants.java"/>
+    </Field>
+    <SourceLine classname="com.bluetooth.bdsk.Constants" start="11" end="11" startBytecode="44" endBytecode="44" sourcefile="Constants.java" sourcepath="com/bluetooth/bdsk/Constants.java"/>
+  </BugInstance>
+  <BugInstance type="MS_MUTABLE_ARRAY" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="com.bluetooth.bdsk.Constants">
+      <SourceLine classname="com.bluetooth.bdsk.Constants" sourcefile="Constants.java" sourcepath="com/bluetooth/bdsk/Constants.java"/>
+    </Class>
+    <Field classname="com.bluetooth.bdsk.Constants" name="ALERT_LEVEL_HIGH" signature="[B" isStatic="true">
+      <SourceLine classname="com.bluetooth.bdsk.Constants" sourcefile="Constants.java" sourcepath="com/bluetooth/bdsk/Constants.java"/>
+    </Field>
+    <SourceLine classname="com.bluetooth.bdsk.Constants" start="10" end="10" startBytecode="27" endBytecode="27" sourcefile="Constants.java" sourcepath="com/bluetooth/bdsk/Constants.java"/>
+  </BugInstance>
+  <BugInstance type="MS_MUTABLE_ARRAY" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="com.bluetooth.bdsk.Constants">
+      <SourceLine classname="com.bluetooth.bdsk.Constants" sourcefile="Constants.java" sourcepath="com/bluetooth/bdsk/Constants.java"/>
+    </Class>
+    <Field classname="com.bluetooth.bdsk.Constants" name="ALERT_LEVEL_LOW" signature="[B" isStatic="true">
+      <SourceLine classname="com.bluetooth.bdsk.Constants" sourcefile="Constants.java" sourcepath="com/bluetooth/bdsk/Constants.java"/>
+    </Field>
+    <SourceLine classname="com.bluetooth.bdsk.Constants" start="8" end="8" startBytecode="7" endBytecode="7" sourcefile="Constants.java" sourcepath="com/bluetooth/bdsk/Constants.java"/>
+  </BugInstance>
+  <BugInstance type="MS_MUTABLE_ARRAY" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="com.bluetooth.bdsk.Constants">
+      <SourceLine classname="com.bluetooth.bdsk.Constants" sourcefile="Constants.java" sourcepath="com/bluetooth/bdsk/Constants.java"/>
+    </Class>
+    <Field classname="com.bluetooth.bdsk.Constants" name="ALERT_LEVEL_MID" signature="[B" isStatic="true">
+      <SourceLine classname="com.bluetooth.bdsk.Constants" sourcefile="Constants.java" sourcepath="com/bluetooth/bdsk/Constants.java"/>
+    </Field>
+    <SourceLine classname="com.bluetooth.bdsk.Constants" start="9" end="9" startBytecode="17" endBytecode="17" sourcefile="Constants.java" sourcepath="com/bluetooth/bdsk/Constants.java"/>
+  </BugInstance>
+  <BugInstance type="SIC_INNER_SHOULD_BE_STATIC_ANON" priority="3" rank="20" abbrev="SIC" category="PERFORMANCE">
+    <Class classname="com.bluetooth.bdsk.audio.AlarmManager$1" role="CLASS_ANONYMOUS">
+      <SourceLine classname="com.bluetooth.bdsk.audio.AlarmManager$1" sourcefile="AlarmManager.java" sourcepath="com/bluetooth/bdsk/audio/AlarmManager.java"/>
+    </Class>
+    <Class classname="com.bluetooth.bdsk.audio.AlarmManager">
+      <SourceLine classname="com.bluetooth.bdsk.audio.AlarmManager" sourcefile="AlarmManager.java" sourcepath="com/bluetooth/bdsk/audio/AlarmManager.java"/>
+    </Class>
+    <Method classname="com.bluetooth.bdsk.audio.AlarmManager" name="soundAlarm" signature="(Landroid/content/res/AssetFileDescriptor;)V" isStatic="false">
+      <SourceLine classname="com.bluetooth.bdsk.audio.AlarmManager" start="41" end="68" startBytecode="0" endBytecode="399" sourcefile="AlarmManager.java" sourcepath="com/bluetooth/bdsk/audio/AlarmManager.java"/>
+    </Method>
+    <SourceLine classname="com.bluetooth.bdsk.audio.AlarmManager" start="44" end="44" startBytecode="35" endBytecode="35" sourcefile="AlarmManager.java" sourcepath="com/bluetooth/bdsk/audio/AlarmManager.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" rank="16" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="com.bluetooth.bdsk.bluetooth.BleAdapterService">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+    </Class>
+    <Field classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" name="ALERT_LEVEL_CHARACTERISTIC" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+    </Field>
+    <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" start="70" end="70" startBytecode="27" endBytecode="27" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" rank="16" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="com.bluetooth.bdsk.bluetooth.BleAdapterService">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+    </Class>
+    <Field classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" name="CLIENT_CHARACTERISTIC_CONFIG" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+    </Field>
+    <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" start="74" end="74" startBytecode="42" endBytecode="42" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" rank="16" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="com.bluetooth.bdsk.bluetooth.BleAdapterService">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+    </Class>
+    <Field classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" name="CLIENT_PROXIMITY_CHARACTERISTIC" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+    </Field>
+    <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" start="71" end="71" startBytecode="32" endBytecode="32" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" rank="16" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="com.bluetooth.bdsk.bluetooth.BleAdapterService">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+    </Class>
+    <Field classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" name="HEALTH_THERMOMETER_SERVICE_UUID" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+    </Field>
+    <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" start="67" end="67" startBytecode="22" endBytecode="22" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" rank="16" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="com.bluetooth.bdsk.bluetooth.BleAdapterService">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+    </Class>
+    <Field classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" name="IMMEDIATE_ALERT_SERVICE_UUID" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+    </Field>
+    <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" start="63" end="63" startBytecode="2" endBytecode="2" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" rank="16" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="com.bluetooth.bdsk.bluetooth.BleAdapterService">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+    </Class>
+    <Field classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" name="LINK_LOSS_SERVICE_UUID" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+    </Field>
+    <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" start="64" end="64" startBytecode="7" endBytecode="7" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" rank="16" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="com.bluetooth.bdsk.bluetooth.BleAdapterService">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+    </Class>
+    <Field classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" name="PROXIMITY_MONITORING_SERVICE_UUID" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+    </Field>
+    <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" start="66" end="66" startBytecode="17" endBytecode="17" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" rank="16" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="com.bluetooth.bdsk.bluetooth.BleAdapterService">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+    </Class>
+    <Field classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" name="TEMPERATURE_MEASUREMENT_CHARACTERISTIC" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+    </Field>
+    <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" start="72" end="72" startBytecode="37" endBytecode="37" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+  </BugInstance>
+  <BugInstance type="MS_SHOULD_BE_FINAL" priority="1" rank="16" abbrev="MS" category="MALICIOUS_CODE">
+    <Class classname="com.bluetooth.bdsk.bluetooth.BleAdapterService">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+    </Class>
+    <Field classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" name="TX_POWER_SERVICE_UUID" signature="Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+    </Field>
+    <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" start="65" end="65" startBytecode="12" endBytecode="12" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+  </BugInstance>
+  <BugInstance type="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE" priority="2" rank="18" abbrev="RCN" category="STYLE">
+    <Class classname="com.bluetooth.bdsk.bluetooth.BleAdapterService">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+    </Class>
+    <Method classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" name="disconnect" signature="()V" isStatic="false">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" start="139" end="147" startBytecode="0" endBytecode="118" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+    </Method>
+    <Field classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" name="bluetooth_gatt" signature="Landroid/bluetooth/BluetoothGatt;" isStatic="false" role="FIELD_VALUE_OF">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java"/>
+    </Field>
+    <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleAdapterService" start="144" end="144" startBytecode="31" endBytecode="31" sourcefile="BleAdapterService.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleAdapterService.java" role="SOURCE_REDUNDANT_NULL_CHECK"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" rank="18" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="com.bluetooth.bdsk.bluetooth.BleScanner">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleScanner" sourcefile="BleScanner.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleScanner.java"/>
+    </Class>
+    <Field classname="com.bluetooth.bdsk.bluetooth.BleScanner" name="context" signature="Landroid/content/Context;" isStatic="false">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleScanner" sourcefile="BleScanner.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleScanner.java"/>
+    </Field>
+    <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleScanner" start="30" end="30" startBytecode="50" endBytecode="50" sourcefile="BleScanner.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleScanner.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" rank="18" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="com.bluetooth.bdsk.bluetooth.BleScanner">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleScanner" sourcefile="BleScanner.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleScanner.java"/>
+    </Class>
+    <Field classname="com.bluetooth.bdsk.bluetooth.BleScanner" name="device_name_start" signature="Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleScanner" sourcefile="BleScanner.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleScanner.java"/>
+    </Field>
+    <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleScanner" start="27" end="27" startBytecode="33" endBytecode="33" sourcefile="BleScanner.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleScanner.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE">
+    <Class classname="com.bluetooth.bdsk.bluetooth.BleScanner">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleScanner" sourcefile="BleScanner.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleScanner.java"/>
+    </Class>
+    <Field classname="com.bluetooth.bdsk.bluetooth.BleScanner" name="scan_results_consumer" signature="Lcom/bluetooth/bdsk/bluetooth/ScanResultsConsumer;" isStatic="false">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleScanner" sourcefile="BleScanner.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleScanner.java"/>
+    </Field>
+    <Method classname="com.bluetooth.bdsk.bluetooth.BleScanner" name="setScanning" signature="(Z)V" isStatic="false">
+      <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleScanner" start="97" end="102" startBytecode="0" endBytecode="108" sourcefile="BleScanner.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleScanner.java"/>
+    </Method>
+    <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleScanner" start="99" end="99" startBytecode="13" endBytecode="13" sourcefile="BleScanner.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleScanner.java"/>
+    <SourceLine classname="com.bluetooth.bdsk.bluetooth.BleScanner" start="101" end="101" startBytecode="25" endBytecode="25" sourcefile="BleScanner.java" sourcepath="com/bluetooth/bdsk/bluetooth/BleScanner.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" rank="18" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="com.bluetooth.bdsk.ui.MainActivity">
+      <SourceLine classname="com.bluetooth.bdsk.ui.MainActivity" sourcefile="MainActivity.java" sourcepath="com/bluetooth/bdsk/ui/MainActivity.java"/>
+    </Class>
+    <Field classname="com.bluetooth.bdsk.ui.MainActivity" name="handler" signature="Landroid/os/Handler;" isStatic="false">
+      <SourceLine classname="com.bluetooth.bdsk.ui.MainActivity" sourcefile="MainActivity.java" sourcepath="com/bluetooth/bdsk/ui/MainActivity.java"/>
+    </Field>
+    <SourceLine classname="com.bluetooth.bdsk.ui.MainActivity" start="39" end="39" startBytecode="17" endBytecode="17" sourcefile="MainActivity.java" sourcepath="com/bluetooth/bdsk/ui/MainActivity.java"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="3" rank="20" abbrev="UrF" category="PERFORMANCE">
+    <Class classname="com.bluetooth.bdsk.ui.MainActivity">
+      <SourceLine classname="com.bluetooth.bdsk.ui.MainActivity" sourcefile="MainActivity.java" sourcepath="com/bluetooth/bdsk/ui/MainActivity.java"/>
+    </Class>
+    <Field classname="com.bluetooth.bdsk.ui.MainActivity" name="PERMISSIONS_LOCATION" signature="[Ljava/lang/String;" isStatic="true">
+      <SourceLine classname="com.bluetooth.bdsk.ui.MainActivity" sourcefile="MainActivity.java" sourcepath="com/bluetooth/bdsk/ui/MainActivity.java"/>
+    </Field>
+    <SourceLine classname="com.bluetooth.bdsk.ui.MainActivity" start="44" end="44" startBytecode="9" endBytecode="9" sourcefile="MainActivity.java" sourcepath="com/bluetooth/bdsk/ui/MainActivity.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE">
+    <Class classname="com.bluetooth.bdsk.ui.MainActivity">
+      <SourceLine classname="com.bluetooth.bdsk.ui.MainActivity" sourcefile="MainActivity.java" sourcepath="com/bluetooth/bdsk/ui/MainActivity.java"/>
+    </Class>
+    <Field classname="com.bluetooth.bdsk.ui.MainActivity" name="ble_scanner" signature="Lcom/bluetooth/bdsk/bluetooth/BleScanner;" isStatic="false">
+      <SourceLine classname="com.bluetooth.bdsk.ui.MainActivity" sourcefile="MainActivity.java" sourcepath="com/bluetooth/bdsk/ui/MainActivity.java"/>
+    </Field>
+    <Method classname="com.bluetooth.bdsk.ui.MainActivity" name="onRequestPermissionsResult" signature="(I[Ljava/lang/String;[I)V" isStatic="false">
+      <SourceLine classname="com.bluetooth.bdsk.ui.MainActivity" start="283" end="299" startBytecode="0" endBytecode="191" sourcefile="MainActivity.java" sourcepath="com/bluetooth/bdsk/ui/MainActivity.java"/>
+    </Method>
+    <SourceLine classname="com.bluetooth.bdsk.ui.MainActivity" start="290" end="290" startBytecode="41" endBytecode="41" sourcefile="MainActivity.java" sourcepath="com/bluetooth/bdsk/ui/MainActivity.java"/>
+  </BugInstance>
+  <BugInstance type="UWF_FIELD_NOT_INITIALIZED_IN_CONSTRUCTOR" priority="3" rank="20" abbrev="UwF" category="STYLE">
+    <Class classname="com.bluetooth.bdsk.ui.MainActivity">
+      <SourceLine classname="com.bluetooth.bdsk.ui.MainActivity" sourcefile="MainActivity.java" sourcepath="com/bluetooth/bdsk/ui/MainActivity.java"/>
+    </Class>
+    <Field classname="com.bluetooth.bdsk.ui.MainActivity" name="ble_scanner" signature="Lcom/bluetooth/bdsk/bluetooth/BleScanner;" isStatic="false">
+      <SourceLine classname="com.bluetooth.bdsk.ui.MainActivity" sourcefile="MainActivity.java" sourcepath="com/bluetooth/bdsk/ui/MainActivity.java"/>
+    </Field>
+    <Method classname="com.bluetooth.bdsk.ui.MainActivity" name="onScan" signature="(Landroid/view/View;)V" isStatic="false">
+      <SourceLine classname="com.bluetooth.bdsk.ui.MainActivity" start="222" end="243" startBytecode="0" endBytecode="212" sourcefile="MainActivity.java" sourcepath="com/bluetooth/bdsk/ui/MainActivity.java"/>
+    </Method>
+    <SourceLine classname="com.bluetooth.bdsk.ui.MainActivity" start="222" end="222" startBytecode="4" endBytecode="4" sourcefile="MainActivity.java" sourcepath="com/bluetooth/bdsk/ui/MainActivity.java"/>
+  </BugInstance>
+  <BugInstance type="DE_MIGHT_IGNORE" priority="3" rank="19" abbrev="DE" category="BAD_PRACTICE">
+    <Class classname="com.bluetooth.bdsk.ui.PeripheralControlActivity">
+      <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java"/>
+    </Class>
+    <Method classname="com.bluetooth.bdsk.ui.PeripheralControlActivity" name="onBackPressed" signature="()V" isStatic="false">
+      <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity" start="284" end="294" startBytecode="0" endBytecode="137" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java"/>
+    </Method>
+    <Class classname="java.lang.Exception" role="CLASS_EXCEPTION">
+      <SourceLine classname="java.lang.Exception"/>
+    </Class>
+    <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity" start="289" end="289" startBytecode="33" endBytecode="33" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java"/>
+    <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity" start="289" end="289" startBytecode="33" endBytecode="33" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java"/>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N">
+    <Class classname="com.bluetooth.bdsk.ui.PeripheralControlActivity">
+      <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java"/>
+    </Class>
+    <Method classname="com.bluetooth.bdsk.ui.PeripheralControlActivity" name="byteArrayAsHexString" signature="([B)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity" start="497" end="507" startBytecode="0" endBytecode="259" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java"/>
+    </Method>
+    <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity" start="505" end="505" startBytecode="78" endBytecode="78" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java"/>
+  </BugInstance>
+  <BugInstance type="NS_NON_SHORT_CIRCUIT" priority="2" rank="17" abbrev="NS" category="STYLE">
+    <Class classname="com.bluetooth.bdsk.ui.PeripheralControlActivity">
+      <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java"/>
+    </Class>
+    <Method classname="com.bluetooth.bdsk.ui.PeripheralControlActivity" name="byteArrayAsHexString" signature="([B)Ljava/lang/String;" isStatic="false">
+      <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity" start="497" end="507" startBytecode="0" endBytecode="259" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java"/>
+    </Method>
+    <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity" start="503" end="503" startBytecode="54" endBytecode="54" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java"/>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" rank="19" abbrev="SF" category="STYLE">
+    <Class classname="com.bluetooth.bdsk.ui.PeripheralControlActivity">
+      <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java"/>
+    </Class>
+    <Method classname="com.bluetooth.bdsk.ui.PeripheralControlActivity" name="setAlertLevel" signature="(I)V" isStatic="false">
+      <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity" start="297" end="318" startBytecode="0" endBytecode="247" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java"/>
+    </Method>
+    <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity" start="304" end="314" startBytecode="57" endBytecode="140" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java"/>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="2" rank="17" abbrev="DLS" category="STYLE">
+    <Class classname="com.bluetooth.bdsk.ui.PeripheralControlActivity$2">
+      <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity$2" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java"/>
+    </Class>
+    <Method classname="com.bluetooth.bdsk.ui.PeripheralControlActivity$2" name="handleMessage" signature="(Landroid/os/Message;)V" isStatic="false">
+      <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity$2" start="68" end="258" startBytecode="0" endBytecode="612" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java"/>
+    </Method>
+    <LocalVariable name="service_uuid" register="3" pc="1128" role="LOCAL_VARIABLE_NAMED"/>
+    <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity$2" start="222" end="222" startBytecode="1127" endBytecode="1127" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.BASE_VALUE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="service_uuid"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.NO_LOADS" value="true"/>
+  </BugInstance>
+  <BugInstance type="DM_CONVERT_CASE" priority="3" rank="20" abbrev="Dm" category="I18N">
+    <Class classname="com.bluetooth.bdsk.ui.PeripheralControlActivity$2">
+      <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity$2" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java"/>
+    </Class>
+    <Method classname="com.bluetooth.bdsk.ui.PeripheralControlActivity$2" name="handleMessage" signature="(Landroid/os/Message;)V" isStatic="false">
+      <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity$2" start="68" end="258" startBytecode="0" endBytecode="2453" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java"/>
+    </Method>
+    <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity$2" start="130" end="130" startBytecode="473" endBytecode="473" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java"/>
+    <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity$2" start="185" end="185" startBytecode="809" endBytecode="809" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity$2" start="187" end="187" startBytecode="829" endBytecode="829" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity$2" start="188" end="188" startBytecode="851" endBytecode="851" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity$2" start="190" end="190" startBytecode="872" endBytecode="872" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity$2" start="208" end="208" startBytecode="991" endBytecode="991" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity$2" start="210" end="210" startBytecode="1011" endBytecode="1011" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity$2" start="211" end="211" startBytecode="1033" endBytecode="1033" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+    <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity$2" start="213" end="213" startBytecode="1054" endBytecode="1054" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java" role="SOURCE_LINE_ANOTHER_INSTANCE"/>
+  </BugInstance>
+  <BugInstance type="DM_STRING_TOSTRING" priority="3" rank="20" abbrev="Dm" category="PERFORMANCE">
+    <Class classname="com.bluetooth.bdsk.ui.PeripheralControlActivity$2">
+      <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity$2" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java"/>
+    </Class>
+    <Method classname="com.bluetooth.bdsk.ui.PeripheralControlActivity$2" name="handleMessage" signature="(Landroid/os/Message;)V" isStatic="false">
+      <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity$2" start="68" end="258" startBytecode="0" endBytecode="2453" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java"/>
+    </Method>
+    <SourceLine classname="com.bluetooth.bdsk.ui.PeripheralControlActivity$2" start="227" end="227" startBytecode="1164" endBytecode="1164" sourcefile="PeripheralControlActivity.java" sourcepath="com/bluetooth/bdsk/ui/PeripheralControlActivity.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="48">
+    <MissingClass>android.app.Activity</MissingClass>
+    <MissingClass>android.app.AlertDialog$Builder</MissingClass>
+    <MissingClass>android.app.Service</MissingClass>
+    <MissingClass>android.bluetooth.BluetoothAdapter</MissingClass>
+    <MissingClass>android.bluetooth.BluetoothDevice</MissingClass>
+    <MissingClass>android.bluetooth.BluetoothGatt</MissingClass>
+    <MissingClass>android.bluetooth.BluetoothGattCallback</MissingClass>
+    <MissingClass>android.bluetooth.BluetoothGattCharacteristic</MissingClass>
+    <MissingClass>android.bluetooth.BluetoothGattDescriptor</MissingClass>
+    <MissingClass>android.bluetooth.BluetoothGattService</MissingClass>
+    <MissingClass>android.bluetooth.BluetoothManager</MissingClass>
+    <MissingClass>android.bluetooth.le.BluetoothLeScanner</MissingClass>
+    <MissingClass>android.bluetooth.le.ScanCallback</MissingClass>
+    <MissingClass>android.bluetooth.le.ScanFilter$Builder</MissingClass>
+    <MissingClass>android.bluetooth.le.ScanRecord</MissingClass>
+    <MissingClass>android.bluetooth.le.ScanResult</MissingClass>
+    <MissingClass>android.bluetooth.le.ScanSettings$Builder</MissingClass>
+    <MissingClass>android.content.Context</MissingClass>
+    <MissingClass>android.content.DialogInterface$OnDismissListener</MissingClass>
+    <MissingClass>android.content.Intent</MissingClass>
+    <MissingClass>android.content.ServiceConnection</MissingClass>
+    <MissingClass>android.content.res.AssetFileDescriptor</MissingClass>
+    <MissingClass>android.content.res.Resources</MissingClass>
+    <MissingClass>android.graphics.Color</MissingClass>
+    <MissingClass>android.media.MediaPlayer</MissingClass>
+    <MissingClass>android.media.MediaPlayer$OnCompletionListener</MissingClass>
+    <MissingClass>android.os.Binder</MissingClass>
+    <MissingClass>android.os.Build$VERSION</MissingClass>
+    <MissingClass>android.os.Bundle</MissingClass>
+    <MissingClass>android.os.Handler</MissingClass>
+    <MissingClass>android.os.IBinder</MissingClass>
+    <MissingClass>android.os.Message</MissingClass>
+    <MissingClass>android.util.Log</MissingClass>
+    <MissingClass>android.view.LayoutInflater</MissingClass>
+    <MissingClass>android.view.MenuInflater</MissingClass>
+    <MissingClass>android.view.MenuItem</MissingClass>
+    <MissingClass>android.view.View</MissingClass>
+    <MissingClass>android.widget.AdapterView$OnItemClickListener</MissingClass>
+    <MissingClass>android.widget.BaseAdapter</MissingClass>
+    <MissingClass>android.widget.Button</MissingClass>
+    <MissingClass>android.widget.CompoundButton$OnCheckedChangeListener</MissingClass>
+    <MissingClass>android.widget.LinearLayout</MissingClass>
+    <MissingClass>android.widget.ListView</MissingClass>
+    <MissingClass>android.widget.Switch</MissingClass>
+    <MissingClass>android.widget.TextView</MissingClass>
+    <MissingClass>android.widget.Toast</MissingClass>
+    <MissingClass>androidx.appcompat.app.AppCompatActivity</MissingClass>
+    <MissingClass>androidx.core.app.ActivityCompat</MissingClass>
+  </Errors>
+  <FindBugsSummary timestamp="Tue, 7 Jul 2020 15:16:49 +0100" total_classes="29" referenced_classes="56" total_bugs="29" total_size="976" num_packages="4" java_version="1.8.0_201" vm_version="25.201-b09" cpu_seconds="49.69" clock_seconds="13691.85" peak_mbytes="216.67" alloc_mbytes="1788.50" gc_seconds="0.39" priority_3="9" priority_2="10" priority_1="10">
+    <PackageStats package="com.bluetooth.bdsk" total_bugs="4" total_types="2" total_size="26" priority_2="3" priority_1="1">
+      <ClassStats class="com.bluetooth.bdsk.BuildConfig" sourceFile="BuildConfig.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.bluetooth.bdsk.Constants" sourceFile="Constants.java" interface="false" size="16" bugs="4" priority_2="3" priority_1="1"/>
+    </PackageStats>
+    <PackageStats package="com.bluetooth.bdsk.audio" total_bugs="1" total_types="2" total_size="51" priority_3="1">
+      <ClassStats class="com.bluetooth.bdsk.audio.AlarmManager" sourceFile="AlarmManager.java" interface="false" size="42" bugs="1" priority_3="1"/>
+      <ClassStats class="com.bluetooth.bdsk.audio.AlarmManager$1" sourceFile="AlarmManager.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bluetooth.bdsk.bluetooth" total_bugs="13" total_types="7" total_size="327" priority_3="1" priority_2="3" priority_1="9">
+      <ClassStats class="com.bluetooth.bdsk.bluetooth.BleAdapterService" sourceFile="BleAdapterService.java" interface="false" size="163" bugs="10" priority_2="1" priority_1="9"/>
+      <ClassStats class="com.bluetooth.bdsk.bluetooth.BleAdapterService$1" sourceFile="BleAdapterService.java" interface="false" size="73" bugs="0"/>
+      <ClassStats class="com.bluetooth.bdsk.bluetooth.BleAdapterService$LocalBinder" sourceFile="BleAdapterService.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="com.bluetooth.bdsk.bluetooth.BleScanner" sourceFile="BleScanner.java" interface="false" size="62" bugs="3" priority_3="1" priority_2="2"/>
+      <ClassStats class="com.bluetooth.bdsk.bluetooth.BleScanner$1" sourceFile="BleScanner.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.bluetooth.bdsk.bluetooth.BleScanner$2" sourceFile="BleScanner.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="com.bluetooth.bdsk.bluetooth.ScanResultsConsumer" sourceFile="ScanResultsConsumer.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="com.bluetooth.bdsk.ui" total_bugs="11" total_types="18" total_size="572" priority_3="7" priority_2="4">
+      <ClassStats class="com.bluetooth.bdsk.ui.MainActivity" sourceFile="MainActivity.java" interface="false" size="115" bugs="4" priority_3="3" priority_2="1"/>
+      <ClassStats class="com.bluetooth.bdsk.ui.MainActivity$1" sourceFile="MainActivity.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.bluetooth.bdsk.ui.MainActivity$2" sourceFile="MainActivity.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.bluetooth.bdsk.ui.MainActivity$3" sourceFile="MainActivity.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.bluetooth.bdsk.ui.MainActivity$4" sourceFile="MainActivity.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.bluetooth.bdsk.ui.MainActivity$5" sourceFile="MainActivity.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.bluetooth.bdsk.ui.MainActivity$ListAdapter" sourceFile="MainActivity.java" interface="false" size="40" bugs="0"/>
+      <ClassStats class="com.bluetooth.bdsk.ui.MainActivity$ViewHolder" sourceFile="MainActivity.java" interface="false" size="5" bugs="0"/>
+      <ClassStats class="com.bluetooth.bdsk.ui.NonNull" sourceFile="NonNull.java" interface="true" size="1" bugs="0"/>
+      <ClassStats class="com.bluetooth.bdsk.ui.PeripheralControlActivity" sourceFile="PeripheralControlActivity.java" interface="false" size="157" bugs="4" priority_3="2" priority_2="2"/>
+      <ClassStats class="com.bluetooth.bdsk.ui.PeripheralControlActivity$1" sourceFile="PeripheralControlActivity.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="com.bluetooth.bdsk.ui.PeripheralControlActivity$2" sourceFile="PeripheralControlActivity.java" interface="false" size="135" bugs="3" priority_3="2" priority_2="1"/>
+      <ClassStats class="com.bluetooth.bdsk.ui.PeripheralControlActivity$3" sourceFile="PeripheralControlActivity.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="com.bluetooth.bdsk.ui.PeripheralControlActivity$4" sourceFile="PeripheralControlActivity.java" interface="false" size="15" bugs="0"/>
+      <ClassStats class="com.bluetooth.bdsk.ui.PeripheralControlActivity$5" sourceFile="PeripheralControlActivity.java" interface="false" size="8" bugs="0"/>
+      <ClassStats class="com.bluetooth.bdsk.ui.PeripheralControlActivity$6" sourceFile="PeripheralControlActivity.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="com.bluetooth.bdsk.ui.PeripheralControlActivity$7" sourceFile="PeripheralControlActivity.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.bluetooth.bdsk.ui.PeripheralControlActivity$8" sourceFile="PeripheralControlActivity.java" interface="false" size="7" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.FindBugs2" totalMilliseconds="3342" invocations="2" avgMicrosecondsPerInvocation="1671159" maxMicrosecondsPerInvocation="2133985" standardDeviationMicrosecondsPerInvocation="462826"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.UnconditionalValueDerefDataflowFactory" totalMilliseconds="1162" invocations="143" avgMicrosecondsPerInvocation="8130" maxMicrosecondsPerInvocation="820254" standardDeviationMicrosecondsPerInvocation="68699"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="804" invocations="485" avgMicrosecondsPerInvocation="1658" maxMicrosecondsPerInvocation="59486" standardDeviationMicrosecondsPerInvocation="4097"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="772" invocations="150" avgMicrosecondsPerInvocation="5152" maxMicrosecondsPerInvocation="381320" standardDeviationMicrosecondsPerInvocation="31571"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindRefComparison$SpecialTypeAnalysis" totalMilliseconds="643" invocations="113" avgMicrosecondsPerInvocation="5693" maxMicrosecondsPerInvocation="437560" standardDeviationMicrosecondsPerInvocation="41008"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="631" invocations="143" avgMicrosecondsPerInvocation="4417" maxMicrosecondsPerInvocation="132420" standardDeviationMicrosecondsPerInvocation="15167"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="593" invocations="476" avgMicrosecondsPerInvocation="1245" maxMicrosecondsPerInvocation="52490" standardDeviationMicrosecondsPerInvocation="4014"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="571" invocations="143" avgMicrosecondsPerInvocation="3995" maxMicrosecondsPerInvocation="134446" standardDeviationMicrosecondsPerInvocation="14073"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="487" invocations="143" avgMicrosecondsPerInvocation="3408" maxMicrosecondsPerInvocation="65492" standardDeviationMicrosecondsPerInvocation="10121"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindPuzzlers" totalMilliseconds="475" invocations="29" avgMicrosecondsPerInvocation="16400" maxMicrosecondsPerInvocation="447276" standardDeviationMicrosecondsPerInvocation="81457"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="391" invocations="143" avgMicrosecondsPerInvocation="2734" maxMicrosecondsPerInvocation="97571" standardDeviationMicrosecondsPerInvocation="8824"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="358" invocations="146" avgMicrosecondsPerInvocation="2456" maxMicrosecondsPerInvocation="146020" standardDeviationMicrosecondsPerInvocation="13504"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="253" invocations="56" avgMicrosecondsPerInvocation="4524" maxMicrosecondsPerInvocation="31870" standardDeviationMicrosecondsPerInvocation="7668"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueRangeAnalysisFactory" totalMilliseconds="225" invocations="146" avgMicrosecondsPerInvocation="1544" maxMicrosecondsPerInvocation="79596" standardDeviationMicrosecondsPerInvocation="8535"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="222" invocations="227" avgMicrosecondsPerInvocation="981" maxMicrosecondsPerInvocation="41670" standardDeviationMicrosecondsPerInvocation="3578"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref$CheckCallSitesAndReturnInstructions" totalMilliseconds="204" invocations="143" avgMicrosecondsPerInvocation="1430" maxMicrosecondsPerInvocation="153917" standardDeviationMicrosecondsPerInvocation="12822"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="197" invocations="56" avgMicrosecondsPerInvocation="3529" maxMicrosecondsPerInvocation="53878" standardDeviationMicrosecondsPerInvocation="7873"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNullDeref" totalMilliseconds="167" invocations="29" avgMicrosecondsPerInvocation="5770" maxMicrosecondsPerInvocation="131403" standardDeviationMicrosecondsPerInvocation="23891"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindUselessObjects" totalMilliseconds="156" invocations="29" avgMicrosecondsPerInvocation="5390" maxMicrosecondsPerInvocation="100826" standardDeviationMicrosecondsPerInvocation="18788"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="146" invocations="123" avgMicrosecondsPerInvocation="1189" maxMicrosecondsPerInvocation="88930" standardDeviationMicrosecondsPerInvocation="8136"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ConstantDataflowFactory" totalMilliseconds="140" invocations="143" avgMicrosecondsPerInvocation="982" maxMicrosecondsPerInvocation="40690" standardDeviationMicrosecondsPerInvocation="3931"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

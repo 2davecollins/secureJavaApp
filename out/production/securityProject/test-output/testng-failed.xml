@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite configfailurepolicy="continue" name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="E:/NCIRL/SPADProject/intellijCode/securityProject/testng.xml(failed)">
+    <classes>
+      <class name="mainlibrary.UsersDaoTest">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="setUp"/>
+          <include name="testSQLOR1eq1"/>
+          <include name="afterTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- mainlibrary.UsersDaoTest -->
+    </classes>
+  </test> <!-- E:/NCIRL/SPADProject/intellijCode/securityProject/testng.xml(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

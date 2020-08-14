@@ -14,6 +14,14 @@ public class UsersDao {
 
     public static boolean validate(String name, String password) {
         boolean status = false;
+        String salt = Secret.getSalt();
+        try {
+            password = DB.getEncryptedPassword(password, salt);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
         try (Connection con = DB.getConnection()) {
             try (PreparedStatement ps = con.prepareStatement("select * from Users where UserName=? and UserPass=?")) {
                 ps.setString(1, name);
@@ -48,6 +56,13 @@ public class UsersDao {
     }
 
     public static int addUser(String User, String UserPass, String UserEmail, String Date) {
+
+        String salt = Secret.getSalt();
+        try {
+            UserPass = DB.getEncryptedPassword(UserPass, salt);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         int status = 0;
         try (Connection con = DB.getConnection()) {
