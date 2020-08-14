@@ -294,8 +294,13 @@ public class NewView extends javax.swing.JFrame {
             // String Data[][]=null;
             //  String Column[]=null;
             String Search = SearchField.getText();
-            int BookIDV;
-            BookIDV = Integer.parseInt(Search);
+            int BookIDV = 0;
+            try{
+                BookIDV = Integer.parseInt(Search);
+            }catch (Exception e){
+                JOptionPane.showMessageDialog(NewView.this, "Book ID Should be a number", "Book ID!", JOptionPane.ERROR_MESSAGE);
+            }
+
             try (Connection Con = DB.getConnection()) {
                 try (PreparedStatement ps = Con.prepareStatement("select IssuedBook.BookID,IssuedBook.UserID,Books.BookName , IssuedBook.IssueDate, IssuedBook.ReturnDate from Books,IssuedBook where Books.BookID=IssuedBook.BookID and IssuedBook.BookID=?", ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE)) {
                     ps.setInt(1, BookIDV);
@@ -340,8 +345,13 @@ public class NewView extends javax.swing.JFrame {
             // String Data[][]=null;
             //  String Column[]=null;
             String Search = SearchField.getText();
-            int UserIDV;
-            UserIDV = Integer.parseInt(Search);
+            int UserIDV = 0;
+            try{
+                UserIDV = Integer.parseInt(Search);
+            }catch (Exception e){
+                JOptionPane.showMessageDialog(NewView.this, "User ID Should be a number", "User ID!", JOptionPane.ERROR_MESSAGE);
+            }
+
             try (Connection Con = DB.getConnection()) {
                 try (PreparedStatement ps = Con.prepareStatement("select IssuedBook.BookID,IssuedBook.UserID,Books.BookName , IssuedBook.IssueDate, IssuedBook.ReturnDate from Books,IssuedBook where Books.BookID=IssuedBook.BookID and IssuedBook.UserID=?", ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE)) {
                     ps.setInt(1, UserIDV);
