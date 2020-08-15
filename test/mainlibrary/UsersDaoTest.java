@@ -54,7 +54,8 @@ public class UsersDaoTest {
     @Test(priority = 5)
     public void testValidate() {
         System.out.println("Validate user");
-        Assert.assertEquals(true, udao.validate("TestUser","123"));
+        //Assert.assertEquals(true, udao.validate("TestUser","123"));
+        Assert.assertEquals(true, udao.validate("TestUser","WkZZ58pbJLu7bhpLB+hKbCNyBbI="));
        
     }
     @Test(priority = 6)
