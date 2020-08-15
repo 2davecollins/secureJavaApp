@@ -25,13 +25,13 @@ public class Secret {
             defaultProps.load(in);
 
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+           // e.printStackTrace();
         }finally {
             if(in != null){
                 try {
                     in.close();
                 } catch (IOException e) {
-                    e.printStackTrace();
+                 //   e.printStackTrace();
                 }
             }
             return defaultProps.getProperty("user");
@@ -47,13 +47,13 @@ public class Secret {
             defaultProps.load(in);
 
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+          //  e.printStackTrace();
         }finally {
             if(in != null){
                 try {
                     in.close();
                 } catch (IOException e) {
-                    e.printStackTrace();
+                //    e.printStackTrace();
                 }
             }
 
@@ -68,13 +68,13 @@ public class Secret {
             defaultProps.load(in);
 
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+           // e.printStackTrace();
         }finally {
             if(in != null){
                 try {
                     in.close();
                 } catch (IOException e) {
-                    e.printStackTrace();
+                  //  e.printStackTrace();
                 }
             }
             return defaultProps.getProperty("salt");

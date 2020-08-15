@@ -51,13 +51,13 @@ public class AllStudent extends javax.swing.JFrame {
                         model.addRow(Row);
                     }
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                    //e.printStackTrace();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+               // e.printStackTrace();
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+           // e.printStackTrace();
         }
 
 
@@ -271,7 +271,7 @@ public class AllStudent extends javax.swing.JFrame {
                             model.addRow(Row);
                         }
                         int rowcount = model.getRowCount();
-                        System.out.println(rowcount);
+                        //System.out.println(rowcount);
                         if (rowcount == 0) {
                             String NoRow[];
                             NoRow = new String[7];
@@ -285,13 +285,13 @@ public class AllStudent extends javax.swing.JFrame {
                             model.addRow(NoRow);
                         }
                     } catch (SQLException e) {
-                        e.printStackTrace();
+                        //e.printStackTrace();
                     }
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                   // e.printStackTrace();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+                //e.printStackTrace();
             }
 
 
@@ -313,7 +313,7 @@ public class AllStudent extends javax.swing.JFrame {
                             model.addRow(Row);
                         }
                         int rowcount = model.getRowCount();
-                        System.out.println(rowcount);
+                        //System.out.println(rowcount);
                         if (rowcount == 0) {
                             String NoRow[];
                             NoRow = new String[7];
@@ -329,54 +329,17 @@ public class AllStudent extends javax.swing.JFrame {
                         }
 
                     } catch (SQLException e) {
-                        e.printStackTrace();
+                       // e.printStackTrace();
                     }
                 } catch (SQLException e) {
 
                 }
 
             } catch (SQLException e) {
-                e.printStackTrace();
+                //e.printStackTrace();
             }
 
 
-//            try (Connection Con = DB.getConnection()) {
-//                PreparedStatement ps = Con.prepareStatement("select * from Users where Email like ?", ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-//                ps.setString(1, Search);
-//                ResultSet rs = ps.executeQuery();
-//
-//                ResultSetMetaData rsmd = rs.getMetaData();
-//
-//                int colnum = rsmd.getColumnCount();
-//
-//                //code here
-//                String Row[];
-//                Row = new String[colnum];
-//                while (rs.next()) {
-//                    for (int i = 1; i <= colnum; i++) {
-//                        Row[i - 1] = rs.getString(i);
-//                    }
-//                    model.addRow(Row);
-//                }
-//                int rowcount = model.getRowCount();
-//                System.out.println(rowcount);
-//                if (rowcount == 0) {
-//                    String NoRow[];
-//                    NoRow = new String[7];
-//                    NoRow[1] = "NO";
-//                    NoRow[2] = "RESULT";
-//                    NoRow[0] = "";
-//                    NoRow[3] = "";
-//                    NoRow[4] = "";
-//                    NoRow[5] = "";
-//                    NoRow[6] = "";
-//                    model.addRow(NoRow);
-//
-//                }
-//                Con.close();
-//            } catch (Exception e) {
-//                System.out.println(e);
-//            }
         } else {
 
             JOptionPane.showMessageDialog(AllStudent.this, "Select Name or Email", "No Selection!", JOptionPane.ERROR_MESSAGE);
@@ -416,14 +379,14 @@ public class AllStudent extends javax.swing.JFrame {
                     }
 
                 }catch (SQLException e){
-                    e.printStackTrace();
+                  //  e.printStackTrace();
                 }
             }catch (SQLException e){
-                e.printStackTrace();
+              //  e.printStackTrace();
             }
 
         }catch (SQLException e){
-            e.printStackTrace();
+         //   e.printStackTrace();
         }
 
     }//GEN-LAST:event_ALLActionPerformed

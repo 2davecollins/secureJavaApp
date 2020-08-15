@@ -159,7 +159,7 @@ public class UserLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_passwordActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+
         String User;
         User = username.getText();
         String Pass = String.valueOf(password.getPassword());
@@ -167,7 +167,7 @@ public class UserLogin extends javax.swing.JFrame {
         try {
             Pass = DB.getEncryptedPassword(Pass, salt);
         } catch (Exception e) {
-            e.printStackTrace();
+          //  e.printStackTrace();
         }
         UsersDao.validate(User, Pass);
         if (UsersDao.validate(User, Pass)) {
@@ -183,7 +183,7 @@ public class UserLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+
         this.dispose();
         MainLibrary.main(new String[]{});
     }//GEN-LAST:event_jButton2ActionPerformed

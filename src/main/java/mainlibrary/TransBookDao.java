@@ -13,15 +13,15 @@ public class TransBookDao {
                 try (ResultSet rs = ps.executeQuery()) {
                     status = rs.next();
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                 //   e.printStackTrace();
                 }
 
             } catch (SQLException e) {
-                e.printStackTrace();
+              //  e.printStackTrace();
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+          //  e.printStackTrace();
         }
 
         return status;
@@ -35,13 +35,13 @@ public class TransBookDao {
                 try (ResultSet rs = ps.executeQuery();) {
                     status = rs.next();
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                  //  e.printStackTrace();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+              //  e.printStackTrace();
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+          //  e.printStackTrace();
         }
         return status;
     }
@@ -54,15 +54,15 @@ public class TransBookDao {
                 try (ResultSet rs = ps.executeQuery()) {
                     status = rs.next();
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                 //   e.printStackTrace();
                 }
 
             } catch (SQLException e) {
-                e.printStackTrace();
+             //   e.printStackTrace();
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+          //  e.printStackTrace();
         }
 
         return status;
@@ -88,19 +88,19 @@ public class TransBookDao {
 
                             status = ps2.executeUpdate();
                         } catch (SQLException e) {
-//                            e.printStackTrace();
+                         //  e.printStackTrace();
                         }
                     }
 
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                  //  e.printStackTrace();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+              //  e.printStackTrace();
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+         //   e.printStackTrace();
         }
 
         return status;
@@ -117,11 +117,11 @@ public class TransBookDao {
                 status = ps.executeUpdate();
 
             } catch (SQLException e) {
-                e.printStackTrace();
+              //  e.printStackTrace();
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+          //  e.printStackTrace();
         }
 
         return status;
@@ -136,11 +136,11 @@ public class TransBookDao {
                 status = ps.executeUpdate();
 
             } catch (SQLException e) {
-                e.printStackTrace();
+             //  e.printStackTrace();
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+          //  e.printStackTrace();
         }
 
         return status;
@@ -154,16 +154,16 @@ public class TransBookDao {
                 try(ResultSet rs = ps.executeQuery()){
                     status = rs.next();
                 }catch (SQLException e){
-                    e.printStackTrace();
+                 //   e.printStackTrace();
 
                 }
 
             } catch (SQLException e) {
-                e.printStackTrace();
+             //   e.printStackTrace();
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+          //  e.printStackTrace();
         }
 
         return status;
@@ -183,15 +183,15 @@ public class TransBookDao {
                    // num = rs.getInt("BookNo");
 
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                   // e.printStackTrace();
                 }
 
             } catch (SQLException e) {
-                e.printStackTrace();
+              //  e.printStackTrace();
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+         //   e.printStackTrace();
         }
 
         if (num == 5) {

@@ -389,18 +389,18 @@ public class LibrarianSuccess extends javax.swing.JFrame {
                         Name = rs.getString("FullName");
                         LibrarianID = rs.getString("LibrarianID");
                         Email = rs.getString("Email");
-                        System.out.println(Name + " " + LibrarianID + " " + Email);
+                     //   System.out.println(Name + " " + LibrarianID + " " + Email);
                     }
 
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                   // e.printStackTrace();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+              //  e.printStackTrace();
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+          //  e.printStackTrace();
         }
 
     }

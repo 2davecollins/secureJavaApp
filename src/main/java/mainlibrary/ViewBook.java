@@ -56,14 +56,14 @@ public class ViewBook extends javax.swing.JFrame {
 
 
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                //    e.printStackTrace();
                 }
             } catch (SQLException e) {
 
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+        //    e.printStackTrace();
         }
 
 
@@ -257,8 +257,7 @@ public class ViewBook extends javax.swing.JFrame {
             model.removeRow(model.getRowCount() - 1);
         }
         if (NameRadio.isSelected()) {
-            // String Data[][]=null;
-            //  String Column[]=null;
+
             String Search = "%" + SearchField.getText() + "%";
             try (Connection Con = DB.getConnection()) {
                 try (PreparedStatement ps = Con.prepareStatement("select * from Books where BookName like ?", ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE)) {
@@ -276,7 +275,7 @@ public class ViewBook extends javax.swing.JFrame {
                             model.addRow(Row);
                         }
                         int rowcount = model.getRowCount();
-                        System.out.println(rowcount);
+                       // System.out.println(rowcount);
                         if (rowcount == 0) {
                             String NoRow[];
                             NoRow = new String[7];
@@ -292,20 +291,18 @@ public class ViewBook extends javax.swing.JFrame {
                         }
 
                     } catch (SQLException e) {
-                        e.printStackTrace();
+                     //   e.printStackTrace();
                     }
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                //    e.printStackTrace();
                 }
 
             } catch (SQLException e) {
-                e.printStackTrace();
+            //    e.printStackTrace();
             }
 
         } else if (AuthorRadio.isSelected()) {
 
-            // String Data[][]=null;
-            //  String Column[]=null;
             String Search = "%" + SearchField.getText() + "%";
             try (Connection Con = DB.getConnection()) {
                 try (PreparedStatement ps = Con.prepareStatement("select * from Books where Author like ?", ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE)) {
@@ -322,7 +319,7 @@ public class ViewBook extends javax.swing.JFrame {
                             model.addRow(Row);
                         }
                         int rowcount = model.getRowCount();
-                        System.out.println(rowcount);
+                        //System.out.println(rowcount);
                         if (rowcount == 0) {
                             String NoRow[];
                             NoRow = new String[7];
@@ -337,17 +334,17 @@ public class ViewBook extends javax.swing.JFrame {
                         }
 
                     } catch (SQLException e) {
-                        e.printStackTrace();
+                     //   e.printStackTrace();
                     }
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                //    e.printStackTrace();
                 }
 
             } catch (SQLException e) {
-                e.printStackTrace();
+            //    e.printStackTrace();
             }
 
-//
+
         } else {
 
             JOptionPane.showMessageDialog(ViewBook.this, "Select Name or Author", "No Selection!", JOptionPane.ERROR_MESSAGE);
@@ -372,8 +369,7 @@ public class ViewBook extends javax.swing.JFrame {
         while (model.getRowCount() > 0) {
             model.removeRow(model.getRowCount() - 1);
         }
-        // String Data[][]=null;
-        //  String Column[]=null;
+
 
         try (Connection Con = DB.getConnection()) {
             try (PreparedStatement ps = Con.prepareStatement("select * from Books", ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE)) {
@@ -389,13 +385,13 @@ public class ViewBook extends javax.swing.JFrame {
                         model.addRow(Row);
                     }
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                 //   e.printStackTrace();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+            //    e.printStackTrace();
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+         //   e.printStackTrace();
         }
 
     }//GEN-LAST:event_ALLActionPerformed

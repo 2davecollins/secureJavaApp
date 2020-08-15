@@ -23,10 +23,10 @@ public class UsersDao {
                     status = rs.next();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+              //  e.printStackTrace();
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+        //    e.printStackTrace();
         }
         return status;
     }
@@ -39,13 +39,13 @@ public class UsersDao {
                 try (ResultSet rs = ps.executeQuery()) {
                     status = rs.next();
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                //    e.printStackTrace();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+             //   e.printStackTrace();
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+         //   e.printStackTrace();
         }
         return status;
     }
@@ -53,11 +53,11 @@ public class UsersDao {
     public static int addUser(String User, String UserPass, String UserEmail, String Date) {
 
         String salt = Secret.getSalt();
-        System.out.println("Salt "+salt);
+
         try {
             UserPass = DB.getEncryptedPassword(UserPass, salt);
         } catch (Exception e) {
-            e.printStackTrace();
+        //    e.printStackTrace();
         }
 
         int status = 0;
@@ -69,11 +69,11 @@ public class UsersDao {
                 ps.setString(4, UserEmail);
                 status = ps.executeUpdate();
             } catch (SQLException e) {
-                e.printStackTrace();
+             //   e.printStackTrace();
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+         //   e.printStackTrace();
         }
         return status;
 
@@ -87,10 +87,10 @@ public class UsersDao {
                 ps.setString(1, name);
                 status = ps.executeUpdate();
             } catch (SQLException e) {
-                e.printStackTrace();
+              //  e.printStackTrace();
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+         //   e.printStackTrace();
         }
         return status;
     }

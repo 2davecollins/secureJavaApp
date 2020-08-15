@@ -31,7 +31,7 @@ public class LibrarianDao {
                 ps.setInt(1, id);
                 status = ps.executeUpdate();
             } catch (SQLException e) {
-                e.printStackTrace();
+               // e.printStackTrace();
             } finally {
                 ps.close();
             }
@@ -64,7 +64,7 @@ public class LibrarianDao {
             }
 
         }catch (SQLException e){
-            e.printStackTrace();
+          //  e.printStackTrace();
         }
         return status;
     }
@@ -102,7 +102,7 @@ public class LibrarianDao {
                 //e.printStackTrace();
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+          //  e.printStackTrace();
         }
         return status;
     }

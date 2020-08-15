@@ -247,7 +247,7 @@ public class IssueBookForm extends javax.swing.JFrame {
 
         String IFDate = IYear.getText() + "-" + IMonth.getText() + "-" + IDate.getText();
         String RFDate = RYear.getText() + "-" + RMonth.getText() + "-" + RDate.getText();
-        System.out.println(IFDate);
+    //    System.out.println(IFDate);
 
         //Date IFDDate = cal.getDate();
         if (TransBookDao.BookValidate(BookID.getText()) && TransBookDao.UserValidate(UserID.getText())) {

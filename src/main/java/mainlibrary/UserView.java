@@ -59,13 +59,13 @@ public class UserView extends javax.swing.JFrame {
                         model.addRow(Row);
                     }
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                 //   e.printStackTrace();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+            //    e.printStackTrace();
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+         //   e.printStackTrace();
         }
 
     }

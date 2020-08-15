@@ -55,15 +55,15 @@ public class NewView extends javax.swing.JFrame {
                     }
 
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                  //  e.printStackTrace();
                 }
 
             } catch (SQLException e) {
-                e.printStackTrace();
+              //  e.printStackTrace();
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+          //  e.printStackTrace();
         }
 
 
@@ -264,7 +264,7 @@ public class NewView extends javax.swing.JFrame {
                             model.addRow(Row);
                         }
                         int rowcount = model.getRowCount();
-                        System.out.println(rowcount);
+                        //System.out.println(rowcount);
                         if (rowcount == 0) {
                             String NoRow[];
                             NoRow = new String[7];
@@ -279,14 +279,14 @@ public class NewView extends javax.swing.JFrame {
                         }
 
                     } catch (SQLException e) {
-                        e.printStackTrace();
+                      //  e.printStackTrace();
                     }
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                  //  e.printStackTrace();
                 }
 
             } catch (SQLException e) {
-                e.printStackTrace();
+             //   e.printStackTrace();
             }
 
         } else if (BookIDRadio.isSelected()) {
@@ -317,7 +317,7 @@ public class NewView extends javax.swing.JFrame {
                             model.addRow(Row);
                         }
                         int rowcount = model.getRowCount();
-                        System.out.println(rowcount);
+                        //System.out.println(rowcount);
                         if (rowcount == 0) {
                             String NoRow[];
                             NoRow = new String[7];
@@ -332,18 +332,17 @@ public class NewView extends javax.swing.JFrame {
                         }
 
                     } catch (SQLException e) {
-                        e.printStackTrace();
+                      //  e.printStackTrace();
                     }
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                  //  e.printStackTrace();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+             //   e.printStackTrace();
             }
 
         } else if (UserIDRadio.isSelected()) {
-            // String Data[][]=null;
-            //  String Column[]=null;
+
             String Search = SearchField.getText();
             int UserIDV = 0;
             try{
@@ -368,7 +367,7 @@ public class NewView extends javax.swing.JFrame {
                             model.addRow(Row);
                         }
                         int rowcount = model.getRowCount();
-                        System.out.println(rowcount);
+                       // System.out.println(rowcount);
                         if (rowcount == 0) {
                             String NoRow[];
                             NoRow = new String[7];
@@ -382,13 +381,13 @@ public class NewView extends javax.swing.JFrame {
                             model.addRow(NoRow);
                         }
                     } catch (SQLException e) {
-                        e.printStackTrace();
+                      //  e.printStackTrace();
                     }
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                  //  e.printStackTrace();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+               // e.printStackTrace();
             }
         } else {
 
@@ -434,14 +433,14 @@ public class NewView extends javax.swing.JFrame {
                     }
 
                 }catch (SQLException e){
-                    e.printStackTrace();
+                 //   e.printStackTrace();
                 }
             }catch (SQLException e){
-                e.printStackTrace();
+              //  e.printStackTrace();
             }
 
         }catch (SQLException e){
-            e.printStackTrace();
+         //   e.printStackTrace();
         }
 
     }//GEN-LAST:event_ALLActionPerformed

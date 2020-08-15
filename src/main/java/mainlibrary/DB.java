@@ -52,9 +52,9 @@ public class DB {
             } catch (RuntimeException e) {
                 throw e;
             } catch (SQLException e) {
-                e.printStackTrace();
+                //e.printStackTrace();
             } catch (Exception e) {
-                System.out.println(e);
+                //System.out.println(e);
             }
         return con;
     }

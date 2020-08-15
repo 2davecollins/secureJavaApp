@@ -253,7 +253,7 @@ public class UserLoginSuccess extends javax.swing.JFrame {
         String Pass = args[1];
 
         try (Connection Con = DB.getConnection()) {
-            System.out.println("Success Password "+Pass);
+            //System.out.println("Success Password "+Pass);
             try (PreparedStatement ps = Con.prepareStatement("select * from Users where UserName=? and UserPass=?")) {
                 ps.setString(1, User);
                 ps.setString(2, Pass);
@@ -266,14 +266,14 @@ public class UserLoginSuccess extends javax.swing.JFrame {
                     GetUserID = rs.getString("UserID");
 
                 } catch (SQLException e) {
-                    e.printStackTrace();
+                  //  e.printStackTrace();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+             //   e.printStackTrace();
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+         //   e.printStackTrace();
         }
     }
 
