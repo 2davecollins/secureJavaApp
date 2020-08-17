@@ -5,6 +5,8 @@
  */
 package mainlibrary;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 import java.io.FileInputStream;
@@ -15,9 +17,7 @@ import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.KeySpec;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.*;
 
 /**
@@ -27,14 +27,11 @@ public class DB {
 
 
     public static final String connection = "jdbc:mysql://localhost:3306/library";
-   // public static final String user =
 
     private static final Random RANDOM = new SecureRandom();
     private static final String ALPHABET = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     private static final int ITERATIONS = 10000;
     private static final int KEY_LENGTH = 256;
-
-
 
     public static Connection getConnection() {
 
@@ -47,7 +44,7 @@ public class DB {
                 props.put("useServerPrepStmts", "false"); // use client-side prepared statement
                 props.put("characterEncoding", "UTF-8"); // ensure charset is utf8 here
 
-                //Class.forName("com.mysql.jdbc.Driver");
+                //class.forName("com.mysql.jdbc.Driver");
                 con = DriverManager.getConnection(connection, props);
             } catch (RuntimeException e) {
                 throw e;
@@ -92,6 +89,25 @@ public class DB {
             return false;
         }
 
+    }
+
+    @SuppressFBWarnings("RCN_REDUNDANT_NULLCHECK_WOULD_HAVE_BEEN_A_NPE")
+
+    public static boolean getFromDB(String statement, Object[] q){
+        try (Connection con = DB.getConnection()) {
+            try (PreparedStatement ps = con.prepareStatement(statement)) {
+                for(int i = 0; i < q.length; i++){
+                    ps.setObject((i+1),q[i]);
+                }
+                try (ResultSet rs = ps.executeQuery()) {
+                   return rs.next();
+                }
+            } catch (SQLException e) {
+               return false;
+            }
+        } catch (SQLException e) {
+            return false;
+        }
     }
 
 

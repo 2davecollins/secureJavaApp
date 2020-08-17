@@ -11,8 +11,6 @@ public class Secret {
 
 
     public Secret(){
-       // connection="jdbc:mysql://localhost:3306/library";
-       // salt="rgqxY3pU04xmWDWjxGu1KcSdklCyWT";
 
     }
 
